@@ -37,8 +37,8 @@ form.addEventListener("submit", handleSubmit);
 
 // NAVIGATION PANEL
 let navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close");
+navToggle = document.getElementById("nav-toggle"),
+navClose = document.getElementById("nav-close");
 
 // MENU SHOW
 if (navToggle) {
@@ -62,41 +62,6 @@ function linkAction() {
   navMenu.classList.remove("show-menu");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-// let navMenu = document.getElementById("nav-menu"),
-//   navToggle = document.getElementById("nav-toggle"),
-//   navClose = document.getElementById("nav-close");
-
-// // MENU SHOW
-// if (navToggle) {
-//   navToggle.addEventListener("click", () => {
-//     console.log("Toggle clicked: Showing menu");
-//     navMenu.classList.add("show-menu");
-//   });
-// }
-
-// // MENU HIDDEN
-// if (navClose) {
-//   navClose.addEventListener("click", () => {
-//     console.log("Close clicked: Hiding menu");
-//     navMenu.classList.remove("show-menu");
-//   });
-// }
-
-
-// // REMOVE MENU WHEN A LINK IS CLICKED
-// const navLinks = document.querySelectorAll(".nav_link");
-
-// function linkAction() {
-//   console.log("Link clicked: Hiding menu");
-//   navMenu.classList.remove("show-menu");
-// }
-
-// navLinks.forEach((n) => {
-//   console.log("Adding event listener to nav link");
-//   n.addEventListener("click", linkAction);
-// });
-
 
 // SKILLS
 const skillContent = document.querySelectorAll(".skill");
