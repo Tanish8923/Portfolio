@@ -76,30 +76,26 @@ skillHeaderArr.forEach((element, idx) => {
 });
 
 // QUALIFICATION TABS
-// let education = document.getElementById("education");
-// let work = document.getElementById("work");
-// let educationheader = document.getElementById("educationheader");
-// let workheader = document.getElementById("workheader");
-// workheader.style.color = "var(--first-colour)";
+let education = document.getElementById("education");
+let work = document.getElementById("work");
+let educationheader = document.getElementById("educationheader");
+let workheader = document.getElementById("workheader");
 
-// educationheader.addEventListener("click", () => {
-//   let condition1 = work.classList.contains("qualification-inactive");
-//   if (!condition1) {
-//     education.classList.remove("qualification-inactive");
-//     work.classList.add("qualification-inactive");
-//     workheader.style.color = "var(--text-colour)";
-//     educationheader.style.color = "var(--first-colour)";
-//   }
-// });
-// workheader.addEventListener("click", () => {
-//   let condition2 = education.classList.contains("qualification-inactive");
-//   if (!condition2) {
-//     work.classList.remove("qualification-inactive");
-//     education.classList.add("qualification-inactive");
-//     educationheader.style.color = "var(--text-colour)";
-//     workheader.style.color = "var(--first-colour)";
-//   }
-// });
+const tabs = document.querySelectorAll('.qualification_button');
+const contents = document.querySelectorAll('.qualification_content');
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+    // Remove active from all tabs and hide all sections
+    tabs.forEach(t => t.classList.remove('active-tab'));
+    contents.forEach(c => c.classList.add('qualification-inactive'));
+
+    // Add active to clicked tab and show its section
+    tab.classList.add('active-tab');
+    contents[index].classList.remove('qualification-inactive');
+  });
+});
+
 
 // PORTFOLIO SWIPER
 let swiper = new Swiper(".mySwiper", {

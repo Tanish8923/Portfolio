@@ -490,9 +490,16 @@ button {
 .qualification_button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
-  color: var(--first-color);
+  color: var(--text-color);  /* DEFAULT inactive color */
   cursor: pointer;
+  transition: 0.3s;
 }
+
+.qualification_button.active-tab {
+  color: var(--first-color);  /* Purple for active tab */
+  font-weight: var(--font-semi-bold);
+}
+
 
 .qualification_button:hover {
   color: var(--first-color);
@@ -1017,3 +1024,8 @@ button {
 
 
 
+.external-logo {
+  width: 34px;       
+  height: 34px;
+  border-radius: 6px; 
+}
